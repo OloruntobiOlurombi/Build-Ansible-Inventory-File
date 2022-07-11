@@ -21,4 +21,24 @@ aws iam list-users
 
 ### Steps
 
-> - Create an EC2 instance in your AWS account using the Ubuntu AMI and micro/free tier VM type. Add a memorable tag like Project:udacity to the instance. Please remember the tag name you're adding.
+> - Create an EC2 instance in your AWS account using the Ubuntu AMI and micro/free tier VM type. Add a memorable tag like Project:udacity to the instance. Please remember the tag name you're adding. Please note that the EC2 instance was provision using CloudFormation.
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Creating an EC2 instance with hard coded values 
+
+Resources:
+  MyEC2:
+    Type: AWS::EC2::Instance
+    Properties: 
+      InstanceType: "t2.micro"
+      ImageId: "ami-052efd3df9dad4825"
+      SecurityGroupIds: 
+        - "sg-0cdd84a41d6e5a53e"
+      SubnetId: "subnet-037fe5f8e2d468b9b"
+      KeyName: "prom"
+      Tags: 
+        - Key: "Project"
+          Value: "udacity"
+```          
