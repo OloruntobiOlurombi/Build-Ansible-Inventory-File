@@ -18,3 +18,7 @@ aws iam list-users
 ### File Structure
 
 ![image](https://user-images.githubusercontent.com/40290711/178330958-11113075-99ef-4174-8b34-9f9331111c7a.png)
+
+### Steps
+
+> - Create an EC2 instance in your AWS account using the Ubuntu AMI and micro/free tier VM type. Add a memorable tag like Project:udacity to the instance. Please remember the tag name you're adding.
