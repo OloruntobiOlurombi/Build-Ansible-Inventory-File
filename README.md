@@ -62,3 +62,9 @@ aws ec2 describe-instances \
       --filters "Name=tag:Project,Values=udacity" \
       --output text >> inventory
 ```      
+> - This will append the udacity-tagged instance public IP addresses to our inventory file and should look something like this:
+
+```
+[all]
+169.254.123.12  # The public IP will be different in your case
+```
