@@ -68,3 +68,6 @@ aws ec2 describe-instances \
 [all]
 169.254.123.12  # The public IP will be different in your case
 ```
+### Please terminate the EC2 instance created for this exercise to clean up.
+
+### END
