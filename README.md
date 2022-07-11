@@ -14,3 +14,7 @@ aws --version
 # Run any test command
 aws iam list-users
 ```
+
+### File Structure
+
+![image](https://user-images.githubusercontent.com/40290711/178330958-11113075-99ef-4174-8b34-9f9331111c7a.png)
