@@ -23,6 +23,8 @@ aws iam list-users
 
 > - Create an EC2 instance in your AWS account using the Ubuntu AMI and micro/free tier VM type. Add a memorable tag like Project:udacity to the instance. Please remember the tag name you're adding. Please note that the EC2 instance was provision using CloudFormation.
 
+> infrafile.yml
+
 ```
 AWSTemplateFormatVersion: 2010-09-09
 
@@ -42,3 +44,21 @@ Resources:
         - Key: "Project"
           Value: "udacity"
 ```          
+
+> - Create an inventory file called inventory (or inventory.txt) with and add [all] at the beginning, using these commands:
+
+```
+# Run this in your exercise directory
+touch inventory
+echo [all] > inventory
+```
+
+> - Run the following CLI command to list the EC2 instance and save the IP address to the inventory file:
+
+```
+aws ec2 describe-instances \
+\
+        --query 'Reservations[*].Instances[*].PublicIpAddress' \
+      --filters "Name=tag:Project,Values=udacity" \
+      --output text >> inventory
+```      
