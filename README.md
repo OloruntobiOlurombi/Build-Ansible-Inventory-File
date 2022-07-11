@@ -6,6 +6,11 @@
 ### Prerequisites:
 
 > AWS Account
-> AWS CLI should be installed  and configured. Verify it using
 
+> AWS CLI should be installed and configured. Verify it using
 
+```
+aws --version
+# Run any test command
+aws iam list-users
+```
